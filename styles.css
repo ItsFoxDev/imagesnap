@@ -8,7 +8,7 @@ html{
 body{
   margin:0px;
   overflow:hidden;
-  background:radial-gradient(var(--bg) 60%,rgba(255, 166, 0, 0.093))
+  background:radial-gradient(var(--bg) 40%,rgba(255, 166, 0, 0.13))
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,7 +49,7 @@ body{
   font-weight:800;
   font-size:45px;
   margin:0px;
-  color:var(--fg)
+  color:var(--fg);
 }
 #subtext{
   font-weight:500;
@@ -138,16 +138,19 @@ body{
   position:fixed;
   bottom:30px;
   width:100vw;
-  height:16px;
   display:flex;
   justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+  /* margin-bottom:25px; */
 }
 #formats{
   display:flex;
   justify-content: center;
   gap:10px;
-  width:clamp(0px,calc(100vw - 35px),400px);
+  /* width:clamp(0px,calc(100vw - 35px),400px); */
+  width:calc(100vw - 100px);
   flex-wrap:wrap;
   align-items: flex-end;
 }
@@ -215,4 +218,12 @@ body{
   font-weight:600;
   color:var(--fg);
   transition:color .2s,background .2s;
+}
+
+
+#convertto{
+  color:var(--fg);
+  font-weight:bold;
+  opacity:.7;
+  text-transform: uppercase;
 }
